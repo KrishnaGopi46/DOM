@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create a div and insert h1 & img tag</title>
+</head>
+<body>
+
+<script>
+			// refer title
+		
+		let div=document.createElement(prompt("Enter the div tag"));
+			
+		let htag=document.createElement(prompt("Enter the h1-h6 tag"));
+			htag.innerHTML=prompt("Enter the h tag content");
+			div.appendChild(htag);
+			
+		let tag=document.createElement(prompt("Enter the img tag"));
+			tag.src="../basic-task/image.jpg";
+			div.appendChild(tag);
+		
+			attribute=prompt("Enter the attribute");
+			attributeName=prompt("Enter the attributeName");
+			attributeValue=prompt("Enter the attributeValue");
+			
+			div.setAttribute(attribute,attributeName + ":" + attributeValue);
+		
+		document.body.appendChild(div);
+		
+		
+	
+</script>
+</body>
+</html>
