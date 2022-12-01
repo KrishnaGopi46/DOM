@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>get tag and change attribute value </title>
+</head>
+<body>
+
+	<h1></h1>
+	
+<script>
+			// refer title
+	
+	let htag=document.getElementsByTagName("h1");
+			htag[0].innerHTML=prompt("Enter the h tag content");
+			
+			
+			//attribute vachi style create panni color chnage panna
+			
+			attribute=prompt("Enter the attribute");
+			attributeName=prompt("Enter the attributeName");
+			attributeValue=prompt("Enter the attributeValue");
+			
+			htag[0].setAttribute(attribute,attributeName + ":" + attributeValue);
+		
+		
+		
+</script>
+</body>
+</html>
