@@ -18,31 +18,45 @@
         <input type="text" id="tipper" placeholder="Tip %">
         
 		<h4 class="text">Tips Amount</h4>
-        <input type="text" id="tipamo" placeholder="Tips Amount" readonly>
+        <input type="text" id="tipamo" placeholder="Tips Amount" disabled>
 		
 		<h4 class="text">Total Amount</h4>
-        <input type="text" id="total" placeholder="Total Amount" readonly>
+        <input type="text" id="total" placeholder="Total Amount" disabled>
 		
 		<button type="button" id="btn">Calculate</button>
 		
+		<h1 id="error"></h1>
     </div>
 	
 <script>
 	let but=document.getElementById("btn");
 	btn.addEventListener("click",myFunction);
 	
+	var text;
+	
 	function myFunction(){
 		var h= document.getElementById("bil").value;
         var w= document.getElementById("tipper").value;
-			tip=(w/100)*h
-			document.getElementById("tipamo").value=tip;
 			
-			result=(parseInt(h)+parseInt(tip))
-            document.getElementById("total").value= result;	
 			
-			if (h == "") {
-				alert("AMOUNT must be filled out");
+		if(h=="" || w==""){
+			text="Enter the Amount";
+			document.getElementById("error").innerHTML=text;
+		}
+		else{
+			if(h>=0 && w>=0){
+				tip=(w/100)*h
+				document.getElementById("tipamo").value=tip;
+			
+				result=(parseInt(h)+parseInt(tip))
+				document.getElementById("total").value= result;	
+			
 			}
+			else{
+				text="Enter the Number no String";
+				document.getElementById("error").innerHTML=text;
+			}
+		}
 	}
 	
 </script>
